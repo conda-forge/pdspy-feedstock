@@ -1,5 +1,5 @@
 {% set name = "pdspy" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 59f7a3d9e9a66462ff8e7ab53ee6173a9535e286939ef3ff6007e41dd07326e2
+  sha256: d08811321ea4cc501a8fb1b07c118a63bff70ac95db4052087e53f58e97142c1
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps
   skip: true  # [win]
 
