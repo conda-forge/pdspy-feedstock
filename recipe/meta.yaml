@@ -1,5 +1,5 @@
 {% set name = "pdspy" %}
-{% set version = "1.5.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d08811321ea4cc501a8fb1b07c118a63bff70ac95db4052087e53f58e97142c1
+  sha256: 52dd6eac15105ce628035bf6d7d6dc13c6e3b803537d26b1729836f19488e664
 
 build:
   number: 0
