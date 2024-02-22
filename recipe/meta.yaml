@@ -41,7 +41,7 @@ requirements:
 test:
   commands:
     - test -d ${PREFIX}
-    - test -f ${PREFIX}/bin/disk_model.py
+    - test -f ${PREFIX}/bin/disk_model_emcee3.py
 
 about:
   home: https://github.com/psheehan/pdspy
