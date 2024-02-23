@@ -1,5 +1,5 @@
 {% set name = "pdspy" %}
-{% set version = "2.0.6" %}
+{% set version = "2.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 53ba7b0687ec543c86b2dc883f3b2ff99ddb79d9b86166b388a35855258dbc89
+  sha256: 7a437c982357068191726ed7ba0105b377b9522ec82e5cf448115ac48229d5e7
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps
-  skip: true  # [win]
+  skip: true  # [win or py>310]
 
 requirements:
   build:
@@ -41,7 +41,7 @@ requirements:
 test:
   commands:
     - test -d ${PREFIX}
-    - test -f ${PREFIX}/bin/disk_model.py
+    - test -f ${PREFIX}/bin/disk_model_emcee3.py
 
 about:
   home: https://github.com/psheehan/pdspy
