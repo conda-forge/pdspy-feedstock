@@ -27,7 +27,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - scipy
+    - scipy <1.14.0
     - matplotlib-base
     - astropy
     - h5py
