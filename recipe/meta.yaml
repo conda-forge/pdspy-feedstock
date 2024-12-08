@@ -10,7 +10,7 @@ source:
   sha256: 74cd1982ef0b7f4da7c83d63f83680d44ece64728eed9d5f61897e34a935dd9f
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps
   skip: true  # [win or py>310]
 
@@ -29,7 +29,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - scipy <1.14.0
     - matplotlib-base
-    - astropy
+    - astropy-base
     - h5py
     - mpi4py
     - emcee
